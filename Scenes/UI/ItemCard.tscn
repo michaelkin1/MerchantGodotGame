@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dg48y18hlfwe4"]
+
+[ext_resource type="Script" uid="uid://dw0li0e2v44kk" path="res://Scripts/UI/ItemCard.gd" id="1_br48i"]
+
+[node name="ItemCard" type="PanelContainer" unique_id=1574083951]
+offset_right = 48.0
+offset_bottom = 105.0
+size_flags_horizontal = 3
+script = ExtResource("1_br48i")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=661593130]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2024564619]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=826305308]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=237102453]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="StatsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1419796517]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=403634542]
+layout_mode = 2
+
+[node name="FairBtn" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow" unique_id=2102379577]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GreedyBtn" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow" unique_id=2113228017]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScamBtn" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow" unique_id=1202085029]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/FairBtn" to="." method="_on_fair_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/GreedyBtn" to="." method="_on_greedy_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonRow/ScamBtn" to="." method="_on_scam_btn_pressed"]

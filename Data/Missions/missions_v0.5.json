@@ -1,0 +1,12 @@
+{
+  "version": "v0.5",
+  "missions": [
+	{ "id": "lost_in_blightwood", "name": "Lost in Blightwood", "difficulty": "diff_easy", "kind": "kind_survival", "visibility": "vis_secret", "risk": "risk_occult" },
+	{ "id": "flooded_shrine_run", "name": "Flooded Shrine Run", "difficulty": "diff_easy", "kind": "kind_religious", "visibility": "vis_public", "risk": "risk_legal" },
+	{ "id": "whispering_ledger", "name": "Whispering Ledger", "difficulty": "diff_easy", "kind": "kind_mystical", "visibility": "vis_secret", "risk": "risk_occult" },
+
+	{ "id": "winter_pass_crossing", "name": "Winter Pass Crossing", "difficulty": "diff_hard", "kind": "kind_survival", "visibility": "vis_public", "risk": "risk_legal" },
+	{ "id": "public_trial", "name": "Public Trial", "difficulty": "diff_hard", "kind": "kind_religious", "visibility": "vis_public", "risk": "risk_legal" },
+	{ "id": "sealed_catacomb", "name": "Sealed Catacomb", "difficulty": "diff_hard", "kind": "kind_mystical", "visibility": "vis_secret", "risk": "risk_occult" }
+  ]
+}

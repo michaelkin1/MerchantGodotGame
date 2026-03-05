@@ -1,0 +1,24 @@
+# Godot 4 cache folder (imports, caches, editor state)
+.godot/
+
+# Godot 3 legacy import folder (harmless to ignore if not present)
+.import/
+
+# Mono/.NET build artifacts (only if using C#)
+.mono/
+data_*/
+bin/
+obj/
+
+# Exported builds (you usually don't want these in source control)
+export/
+exports/
+build/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/

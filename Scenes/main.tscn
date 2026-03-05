@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://bkdj2jn0g4map"]
+
+[ext_resource type="Script" uid="uid://cqao4vke4syqp" path="res://Scripts/main.gd" id="1_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bjrke2pv8rebd" path="res://Art/Sprites/background2.png" id="2_344ge"]
+[ext_resource type="Texture2D" uid="uid://dq8t3fuge4h07" path="res://Art/Sprites/Wagon.png" id="3_344ge"]
+[ext_resource type="Script" uid="uid://dvwl11h20ar1t" path="res://Scripts/UI/ShopTrigger.gd" id="4_kry3j"]
+[ext_resource type="Texture2D" uid="uid://cukvj5sha787a" path="res://Art/Sprites/badgermerchant.png" id="5_344ge"]
+[ext_resource type="Script" uid="uid://5742ivnfii2g" path="res://Scripts/UI/ShopPanel.gd" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dg48y18hlfwe4" path="res://Scenes/UI/ItemCard.tscn" id="7_6bp64"]
+[ext_resource type="Script" uid="uid://nfj0h1ghp0k3" path="res://Scripts/UI/HeroPanel.gd" id="8_344ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21xkr"]
+size = Vector2(162.66666, 111.55556)
+
+[node name="Main" type="Node2D" unique_id=534680955]
+position = Vector2(157, 95)
+script = ExtResource("1_bo1nx")
+
+[node name="World" type="Node2D" parent="." unique_id=303078322]
+
+[node name="Background" type="Sprite2D" parent="World" unique_id=887527936]
+z_index = -13
+position = Vector2(484, 229)
+scale = Vector2(0.753, 0.631)
+texture = ExtResource("2_344ge")
+
+[node name="Wagon" type="Sprite2D" parent="World" unique_id=1759511134]
+position = Vector2(762.4, 205)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("3_344ge")
+
+[node name="ShopTrigger" type="Area2D" parent="World/Wagon" unique_id=285514596]
+script = ExtResource("4_kry3j")
+main_path = NodePath("../../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Wagon/ShopTrigger" unique_id=76001589]
+position = Vector2(-37.777954, -16.666687)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_21xkr")
+
+[node name="Merchant" type="Sprite2D" parent="World" unique_id=647959263]
+position = Vector2(439.4, 260)
+scale = Vector2(0.2, 0.227)
+texture = ExtResource("5_344ge")
+offset = Vector2(160, 90)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=246406177]
+position = Vector2(482.4, 227)
+
+[node name="ShopCanvasLayer" type="CanvasLayer" parent="." unique_id=178861993]
+
+[node name="ShopPanel" type="Panel" parent="ShopCanvasLayer" unique_id=1422604717]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -406.59998
+offset_top = -302.0
+offset_right = 41.400024
+offset_bottom = 299.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("6_21xkr")
+item_card_scene = ExtResource("7_6bp64")
+item_list_path = NodePath("MarginContainer/ShopVBox/ItemList")
+
+[node name="ShopUI" type="Label" parent="ShopCanvasLayer/ShopPanel" unique_id=305802788]
+layout_mode = 0
+offset_top = 273.0
+offset_right = 413.0
+offset_bottom = 296.0
+
+[node name="CloseButton" type="Button" parent="ShopCanvasLayer/ShopPanel" unique_id=1370723884]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -29.0
+offset_bottom = 29.0
+grow_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopCanvasLayer/ShopPanel" unique_id=65367415]
+layout_mode = 0
+offset_right = 458.0
+offset_bottom = 609.0
+mouse_filter = 2
+theme_override_constants/margin_top = 0
+
+[node name="ShopVBox" type="VBoxContainer" parent="ShopCanvasLayer/ShopPanel/MarginContainer" unique_id=1364525344]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TopBar" type="HBoxContainer" parent="ShopCanvasLayer/ShopPanel/MarginContainer/ShopVBox" unique_id=1046345907]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MerchantGoldLabel" type="Label" parent="ShopCanvasLayer/ShopPanel/MarginContainer/ShopVBox/TopBar" unique_id=433520850]
+layout_mode = 2
+
+[node name="ItemList" type="VBoxContainer" parent="ShopCanvasLayer/ShopPanel/MarginContainer/ShopVBox" unique_id=185742640]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeroPanel" type="Panel" parent="ShopCanvasLayer" unique_id=1356859821]
+offset_left = 53.0
+offset_top = 36.0
+offset_right = 513.0
+offset_bottom = 266.0
+script = ExtResource("8_344ge")
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopCanvasLayer/HeroPanel" unique_id=1954743586]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 131.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopCanvasLayer/HeroPanel/MarginContainer" unique_id=545256214]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="ShopCanvasLayer/HeroPanel/MarginContainer/VBoxContainer" unique_id=1167647524]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="ShopCanvasLayer/HeroPanel/MarginContainer/VBoxContainer" unique_id=1737828774]
+layout_mode = 2
+
+[node name="ClassLabel" type="Label" parent="ShopCanvasLayer/HeroPanel/MarginContainer/VBoxContainer" unique_id=1051338244]
+layout_mode = 2
+
+[node name="PersonalityLabel" type="Label" parent="ShopCanvasLayer/HeroPanel/MarginContainer/VBoxContainer" unique_id=1327027358]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="ShopCanvasLayer/HeroPanel/MarginContainer/VBoxContainer" unique_id=2031043375]
+layout_mode = 2
+
+[connection signal="pressed" from="ShopCanvasLayer/ShopPanel/CloseButton" to="ShopCanvasLayer/ShopPanel" method="_on_close_button_pressed"]

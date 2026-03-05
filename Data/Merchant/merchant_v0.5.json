@@ -1,0 +1,9 @@
+{
+  "version": "v0.5",
+  "merchant_start": {
+	"gold": 0,
+	"fame": 0,
+	"heat": 0,
+	"shadow": 0
+  }
+}

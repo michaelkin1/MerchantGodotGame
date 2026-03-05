@@ -1,0 +1,86 @@
+{
+  "version": "v0.5",
+  "meta": {
+	"accept_clamp_min": 0.05,
+	"accept_clamp_max": 0.95
+  },
+
+  "channels": {
+	"sale": [
+	  "base_accept",
+	  "price_sensitivity",
+	  "quality_preference",
+	  "legality_preference",
+      "type_affinity"
+	],
+	"quest": [
+	  "quest_bonus",
+	  "fame_mult",
+	  "heat_mult",
+      "shadow_mult"
+	]
+  },
+
+  "scores": {
+	"item": {
+	  "quality": { "flawed": -1, "robust": 1 },
+	  "legality": { "legal": 1, "illegal": -1 }
+	},
+	"mission": {
+	  "difficulty_threshold": { "diff_easy": 7, "diff_hard": 11 }
+	}
+  },
+
+  "sale_rules": {
+	"base_accept_default": 0.50,
+	"price": {
+	  "expected_price_factor": 1.00,
+	  "price_delta_cap": 1.50
+	},
+	"terms": {
+	  "type_affinity_scale": 1.0
+	}
+  },
+
+  "mission_rules": {
+	"outcome_tiers": {
+	  "success_margin": 0
+	},
+	"base_deltas": {
+	  "diff_easy": { "fame_on_success": 1, "fame_on_failure": -1 },
+	  "diff_hard": { "fame_on_success": 2, "fame_on_failure": -2 }
+	}
+  },
+
+  "mission_mods": {
+	"visibility": {
+	  "vis_public": { "fame_mult": 1.25, "heat_mult": 1.25, "shadow_mult": 0.90 },
+	  "vis_secret": { "fame_mult": 0.85, "heat_mult": 0.85, "shadow_mult": 1.25 }
+	},
+
+	"risk_on_failure": {
+	  "risk_legal": { "heat_add": 2, "shadow_add": 0 },
+	  "risk_occult": { "heat_add": 0, "shadow_add": 2 }
+	},
+
+	"kind_type_bonus": {
+	  "kind_survival": { "potion": 1, "spellbook": 0, "relic": 0 },
+	  "kind_religious": { "relic": 1, "potion": 0, "spellbook": 0 },
+	  "kind_mystical": { "spellbook": 1, "potion": 0, "relic": 0 }
+	}
+  },
+
+  "item_cost_rules": {
+	"base_power_cost": 10,
+	"adders": {
+	  "quality": { "flawed": -2, "robust": 2 },
+	  "legality": { "legal": 1, "illegal": 0 }
+	},
+	"type_mult": {
+	  "potion": 0.95,
+	  "spellbook": 1.05,
+	  "relic": 1.10
+	},
+	"min_cost": 1
+  }
+}

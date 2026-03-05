@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5qmi2av2iwd2"]
+
+[ext_resource type="Texture2D" uid="uid://0f7jovjwkkko" path="res://Art/Sprites/bearhero.png" id="1_cf1mt"]
+
+[node name="Node2D" type="Node2D" unique_id=2064015653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=609387085]
+position = Vector2(-15.999994, 141)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_cf1mt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1538364360]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=436596033]

@@ -1,0 +1,22 @@
+{
+  "version": "v0.5",
+  "items": [
+	{ "id": "potion_field_tonic", "name": "Field Tonic", "type": "potion", "power": 1, "quality": "robust", "legality": "legal", "cost": 14, "sprite_key": "item_potion_tonic" },
+	{ "id": "potion_bitter_draught", "name": "Bitter Draught", "type": "potion", "power": 2, "quality": "flawed", "legality": "legal", "cost": 17, "sprite_key": "item_potion_bitter" },
+	{ "id": "potion_smuggled_amber", "name": "Smuggled Amber Vial", "type": "potion", "power": 2, "quality": "robust", "legality": "illegal", "cost": 24, "sprite_key": "item_potion_smuggled" },
+	{ "id": "potion_black_ichor", "name": "Black Ichor", "type": "potion", "power": 4, "quality": "flawed", "legality": "illegal", "cost": 36, "sprite_key": "item_potion_ichor" },
+	{ "id": "potion_surgeon_salve", "name": "Surgeon’s Salve", "type": "potion", "power": 3, "quality": "robust", "legality": "legal", "cost": 33, "sprite_key": "item_potion_salve" },
+
+	{ "id": "book_spark_rituals", "name": "Spark Rituals", "type": "spellbook", "power": 1, "quality": "robust", "legality": "legal", "cost": 16, "sprite_key": "item_book_spark" },
+	{ "id": "book_torn_grimoire", "name": "Torn Grimoire", "type": "spellbook", "power": 2, "quality": "flawed", "legality": "legal", "cost": 20, "sprite_key": "item_book_torn" },
+	{ "id": "book_ciphered_codex", "name": "Ciphered Codex", "type": "spellbook", "power": 3, "quality": "robust", "legality": "illegal", "cost": 34, "sprite_key": "item_book_ciphered" },
+	{ "id": "book_night_geometry", "name": "Night Geometry", "type": "spellbook", "power": 4, "quality": "robust", "legality": "legal", "cost": 46, "sprite_key": "item_book_night" },
+	{ "id": "book_blood_margin_notes", "name": "Blood Margin Notes", "type": "spellbook", "power": 5, "quality": "flawed", "legality": "illegal", "cost": 49, "sprite_key": "item_book_blood" },
+
+	{ "id": "relic_candle_of_vows", "name": "Candle of Vows", "type": "relic", "power": 1, "quality": "robust", "legality": "legal", "cost": 18, "sprite_key": "item_relic_candle" },
+	{ "id": "relic_splintered_icon", "name": "Splintered Icon", "type": "relic", "power": 2, "quality": "flawed", "legality": "legal", "cost": 21, "sprite_key": "item_relic_icon" },
+	{ "id": "relic_sanctified_chain", "name": "Sanctified Chain", "type": "relic", "power": 3, "quality": "robust", "legality": "legal", "cost": 38, "sprite_key": "item_relic_chain" },
+	{ "id": "relic_forbidden_reliquary", "name": "Forbidden Reliquary", "type": "relic", "power": 4, "quality": "robust", "legality": "illegal", "cost": 45, "sprite_key": "item_relic_reliquary" },
+	{ "id": "relic_ashen_fingerbone", "name": "Ashen Fingerbone", "type": "relic", "power": 5, "quality": "flawed", "legality": "illegal", "cost": 52, "sprite_key": "item_relic_fingerbone" }
+  ]
+}

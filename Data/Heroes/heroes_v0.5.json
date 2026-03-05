@@ -1,0 +1,100 @@
+{
+  "version": "v0.5",
+
+  "classes": [
+	{
+	  "id": "druid",
+	  "name": "Druid",
+	  "competence_min": 2,
+	  "competence_max": 4,
+
+	  "sale_mods": {
+		"base_accept": 0.02,
+		"price_sensitivity": 0.15,
+		"quality_preference": 0.20,
+		"legality_preference": 0.10,
+		"type_affinity": { "potion": 0.30, "spellbook": 0.05, "relic": 0.00 }
+	  },
+
+	  "quest_mods": {
+		"quest_bonus": 0,
+		"fame_mult": 1.00,
+		"heat_mult": 0.95,
+		"shadow_mult": 1.00
+	  },
+
+	  "sprite_key": "hero_druid"
+	},
+
+	{
+	  "id": "priest",
+	  "name": "Priest",
+	  "competence_min": 2,
+	  "competence_max": 4,
+
+	  "sale_mods": {
+		"base_accept": 0.02,
+		"price_sensitivity": 0.10,
+		"quality_preference": 0.30,
+		"legality_preference": 0.35,
+		"type_affinity": { "potion": 0.00, "spellbook": 0.05, "relic": 0.30 }
+	  },
+
+	  "quest_mods": {
+		"quest_bonus": 0,
+		"fame_mult": 1.10,
+		"heat_mult": 1.05,
+		"shadow_mult": 0.90
+	  },
+
+	  "sprite_key": "hero_priest"
+	},
+
+	{
+	  "id": "mage",
+	  "name": "Mage",
+	  "competence_min": 2,
+	  "competence_max": 4,
+
+	  "sale_mods": {
+		"base_accept": 0.03,
+		"price_sensitivity": 0.15,
+		"quality_preference": 0.15,
+		"legality_preference": -0.10,
+		"type_affinity": { "potion": 0.05, "spellbook": 0.30, "relic": 0.00 }
+	  },
+
+	  "quest_mods": {
+		"quest_bonus": 0,
+		"fame_mult": 0.95,
+		"heat_mult": 0.95,
+		"shadow_mult": 1.15
+	  },
+
+	  "sprite_key": "hero_mage"
+	}
+  ],
+
+  "wealth": [
+	{
+	  "id": "poor",
+	  "sale_mods": {
+		"base_accept": 0.05,
+		"price_sensitivity": 0.45,
+		"quality_preference": 0.00,
+		"legality_preference": 0.00,
+		"type_affinity": { "potion": 0.00, "spellbook": 0.00, "relic": 0.00 }
+	  }
+	},
+	{
+	  "id": "rich",
+	  "sale_mods": {
+		"base_accept": -0.02,
+		"price_sensitivity": 0.20,
+		"quality_preference": 0.10,
+		"legality_preference": 0.00,
+		"type_affinity": { "potion": 0.00, "spellbook": 0.00, "relic": 0.00 }
+	  }
+	}
+  ]
+}
